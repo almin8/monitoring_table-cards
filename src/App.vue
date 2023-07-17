@@ -12,7 +12,7 @@
       <div class="m-2">
         <InputText
           class="sm:w-15rem md:w-15rem"
-          v-model.trim.lazy="inputValue"
+          v-model.trim="inputValue"
           type="text"
         />
         <Button @click="searchInput" class="ml-2" label="Поиск" />
