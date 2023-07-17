@@ -153,10 +153,13 @@ export default {
     searchInput() {
       if (this.inputValue === "") {
         this.productsFilter = this.products.slice(this.first, this.first + 6);
+        this.sizeProducts = this.products.length;
       } else {
         this.productsFilter = this.products.filter((el) =>
           el.message.toLowerCase().includes(this.inputValue.toLowerCase())
         );
+        this.sizeProducts = this.productsFilter.length;
+        this.first = 0;
       }
     },
   },
