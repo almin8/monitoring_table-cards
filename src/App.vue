@@ -87,7 +87,9 @@
                 style="background-color: #debde3; color: #ffffff"
                 shape="circle"
               />
-              <div>{{ el.responsibility }}</div>
+              <div class="text-center">
+                {{ el.responsibility }}
+              </div>
             </div>
           </div>
           <div class="flex bottom">
