@@ -65,15 +65,15 @@
           <div class="flex justify-content-between top">
             <div class="info">
               <div class="flex">
-                <div class="w-9rem h-3rem">Дата</div>
+                <div style="min-width: 7rem" class="h-3rem">Дата</div>
                 <div>{{ el.date }}</div>
               </div>
               <div class="flex">
-                <div class="w-9rem h-3rem">Важность</div>
+                <div style="min-width: 7rem" class="h-3rem">Важность</div>
                 <div>{{ el.important }}</div>
               </div>
               <div class="flex">
-                <div class="w-9rem h-3rem">Оборудование</div>
+                <div style="min-width: 7rem" class="h-3rem">Оборудование</div>
                 <div>{{ el.equipment }}</div>
               </div>
             </div>
@@ -91,7 +91,7 @@
             </div>
           </div>
           <div class="flex bottom">
-            <div class="w-9rem h-3rem">Сообщение</div>
+            <div style="min-width: 7rem" class="h-3rem">Сообщение</div>
             <div>{{ el.message }}</div>
           </div>
         </div>
