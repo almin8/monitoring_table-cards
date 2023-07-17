@@ -60,20 +60,21 @@
           tabindex="-1"
           @click="'Yes' !== el.read && reading(el)"
           @keydown.prevent.space="Select == el.id && cons(el)"
-          class="flex flex-column surface-300 font-bold m-5 p-3 cursor-pointer sm:w-39rem border-2 w-29rem"
+          class="flex flex-column surface-300 font-bold m-5 p-3 cursor-pointer border-2 w-29rem"
+          style="min-width: 23rem"
         >
           <div class="flex justify-content-between top">
             <div class="info">
               <div class="flex">
-                <div style="min-width: 7rem" class="h-3rem">Дата</div>
+                <div style="min-width: 8rem" class="h-3rem">Дата:</div>
                 <div>{{ el.date }}</div>
               </div>
               <div class="flex">
-                <div style="min-width: 7rem" class="h-3rem">Важность</div>
+                <div style="min-width: 8rem" class="h-3rem">Важность:</div>
                 <div>{{ el.important }}</div>
               </div>
               <div class="flex">
-                <div style="min-width: 7rem" class="h-3rem">Оборудование</div>
+                <div style="min-width: 8rem" class="h-3rem">Оборудование:</div>
                 <div>{{ el.equipment }}</div>
               </div>
             </div>
@@ -93,7 +94,7 @@
             </div>
           </div>
           <div class="flex bottom">
-            <div style="min-width: 7rem" class="h-3rem">Сообщение</div>
+            <div style="min-width: 8rem" class="h-3rem">Сообщение:</div>
             <div>{{ el.message }}</div>
           </div>
         </div>
