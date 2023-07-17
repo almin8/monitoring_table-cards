@@ -154,6 +154,7 @@ export default {
       if (this.inputValue === "") {
         this.productsFilter = this.products.slice(this.first, this.first + 6);
         this.sizeProducts = this.products.length;
+        this.first = 0;
       } else {
         this.productsFilter = this.products.filter((el) =>
           el.message.toLowerCase().includes(this.inputValue.toLowerCase())
