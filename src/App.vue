@@ -119,6 +119,7 @@ export default {
       inputValue: "",
       products: [],
       productsFilter: [],
+      productsFilterF: [],
       value: "Таблица",
       options: ["Таблица", "Карточка"],
       Select: 0,
@@ -127,7 +128,14 @@ export default {
   },
   methods: {
     getPagiData() {
-      this.productsFilter = this.products.slice(this.first, this.first + 6);
+      if (this.inputValue) {
+        this.productsFilter = this.productsFilterF.slice(
+          this.first,
+          this.first + 6
+        );
+      } else {
+        this.productsFilter = this.products.slice(this.first, this.first + 6);
+      }
     },
     async getServData() {
       try {
@@ -155,15 +163,19 @@ export default {
     },
     searchInput() {
       if (this.inputValue === "") {
-        this.productsFilter = this.products.slice(this.first, this.first + 6);
+        this.productsFilterF = this.products.slice(this.first, this.first + 6);
         this.sizeProducts = this.products.length;
         this.first = 0;
       } else {
-        this.productsFilter = this.products.filter((el) =>
+        this.first = 0;
+        this.productsFilterF = this.products.filter((el) =>
           el.message.toLowerCase().includes(this.inputValue.toLowerCase())
         );
-        this.sizeProducts = this.productsFilter.length;
-        this.first = 0;
+        this.sizeProducts = this.productsFilterF.length;
+        this.productsFilter = this.productsFilterF.slice(
+          this.first,
+          this.first + 6
+        );
       }
     },
   },
